@@ -1,0 +1,50 @@
+name: Update and deploy public report
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Taiwan time Monday and Thursday at 10:30, after the 10:00 video workflow.
+    - cron: "30 2 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install report dependency
+        run: python -m pip install -r requirements.txt
+
+      - name: Run report tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Refresh public channel data
+        run: python tools/update_report.py
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

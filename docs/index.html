@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="世界奇談 YouTube 公開影片數據儀表板">
+  <meta name="theme-color" content="#f1eee5">
+  <title>世界奇談｜影片數據報告</title>
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-lockup">
+      <span class="case-mark">FILE / DATA</span>
+      <div>
+        <p class="series-label">WORLD STRANGE FILES</p>
+        <h1>世界奇談影片數據報告</h1>
+      </div>
+    </div>
+    <a class="channel-link" href="https://www.youtube.com/@ailazybag/videos" target="_blank" rel="noreferrer">查看頻道</a>
+  </header>
+
+  <main>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PUBLIC CHANNEL MONITOR</p>
+          <h2 id="overview-title">公開成效總覽</h2>
+        </div>
+        <p class="updated" id="updatedAt">載入中</p>
+      </div>
+
+      <div class="metric-grid" id="metricGrid" aria-live="polite">
+        <article class="metric">
+          <span>公開影片</span>
+          <strong id="videoCount">-</strong>
+          <small>支</small>
+        </article>
+        <article class="metric">
+          <span>公開觀看</span>
+          <strong id="viewTotal">-</strong>
+          <small>次</small>
+        </article>
+        <article class="metric">
+          <span>訂閱者</span>
+          <strong id="subscriberCount">-</strong>
+          <small>位</small>
+        </article>
+        <article class="metric accent-metric">
+          <span>最高觀看</span>
+          <strong id="topViews">-</strong>
+          <small id="topTopic">讀取中</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis-band" aria-labelledby="series-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SERIES BREAKDOWN</p>
+          <h2 id="series-title">系列表現</h2>
+        </div>
+        <p class="section-note">依目前公開影片觀看數比較</p>
+      </div>
+      <div class="series-chart" id="seriesChart"></div>
+    </section>
+
+    <section class="video-section" aria-labelledby="video-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LATEST PUBLIC FILES</p>
+          <h2 id="video-title">影片明細</h2>
+        </div>
+        <p class="section-note">點選影片即可前往 YouTube</p>
+      </div>
+      <div class="video-grid" id="videoGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <div>
+        <p class="eyebrow">DATA NOTICE</p>
+        <h2 id="method-title">資料說明</h2>
+      </div>
+      <p>本頁僅整理 YouTube 公開頻道頁可見資訊，不使用登入、Cookie 或頻道擁有者 Analytics。曝光、點閱率、留存率、流量來源與收益不在本報告範圍內。</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>世界奇談</span>
+    <span>公開資料自動更新：週一、週四 10:30（台灣時間）</span>
+  </footer>
+
+  <template id="videoCardTemplate">
+    <article class="video-card">
+      <a class="thumbnail-link" target="_blank" rel="noreferrer">
+        <img class="thumbnail" alt="" loading="lazy">
+        <span class="duration"></span>
+      </a>
+      <div class="video-body">
+        <div class="video-meta">
+          <span class="series-pill"></span>
+          <span class="published"></span>
+        </div>
+        <a class="video-title" target="_blank" rel="noreferrer"></a>
+        <div class="video-stats">
+          <span><strong class="views"></strong> 次觀看</span>
+          <span class="delta"></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
