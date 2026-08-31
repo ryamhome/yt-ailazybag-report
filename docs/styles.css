@@ -182,6 +182,108 @@ section + section {
   background: var(--ink);
 }
 
+.review-section {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.review-summary {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.review-score,
+.review-copy {
+  padding: 24px 0;
+}
+
+.review-score {
+  display: grid;
+  gap: 8px;
+  border-right: 1px solid var(--line);
+}
+
+.review-score span,
+.review-score small,
+.review-limit {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.review-score strong {
+  font: 800 38px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.review-copy {
+  padding-left: 28px;
+}
+
+.review-copy > p:first-child {
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.review-limit {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.review-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  padding-top: 26px;
+}
+
+.review-columns h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.review-list {
+  display: grid;
+  gap: 8px;
+}
+
+.review-video {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-left: 4px solid var(--red);
+  background: var(--paper);
+  text-decoration: none;
+}
+
+.review-video:hover,
+.review-video:focus-visible {
+  background: var(--paper-deep);
+}
+
+.review-video span,
+.review-empty {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.strategy-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.strategy-list li {
+  padding-left: 6px;
+  line-height: 1.65;
+}
+
+.strategy-list li + li {
+  margin-top: 10px;
+}
+
 .analysis-band .eyebrow {
   color: #d85d55;
 }
@@ -383,6 +485,10 @@ footer {
   .video-grid {
     grid-template-columns: 1fr;
   }
+
+  .review-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -445,6 +551,23 @@ footer {
 
   .analysis-band {
     padding: 22px 16px;
+  }
+
+  .review-section {
+    padding: 22px 16px;
+  }
+
+  .review-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .review-score {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .review-copy {
+    padding-left: 0;
   }
 
   .series-row {

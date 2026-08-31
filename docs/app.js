@@ -51,6 +51,57 @@ function renderSeries(videos) {
   });
 }
 
+function renderReview(data) {
+  const review = data.weekly_review || {};
+  const mature = Number(review.mature_video_count || 0);
+  const met = Number(review.target_met_count || 0);
+  document.querySelector("#reviewDate").textContent = review.review_date
+    ? `檢討日期 ${review.review_date}`
+    : "尚無檢討日期";
+  document.querySelector("#reviewMet").textContent = `${met} / ${mature}`;
+  document.querySelector("#reviewMature").textContent = `已滿 7 天影片｜目標 ${formatNumber(review.goal_views || 1000)} 次`;
+  document.querySelector("#reviewSummary").textContent = review.summary || "尚無足夠資料";
+  document.querySelector("#reviewLimit").textContent = review.limitations || "";
+
+  const underperformerList = document.querySelector("#underperformerList");
+  const underperformers = review.underperformers || [];
+  underperformerList.replaceChildren();
+  if (!underperformers.length) {
+    const empty = document.createElement("p");
+    empty.className = "review-empty";
+    empty.textContent = mature ? "本期沒有未達標影片" : "尚無發布滿 7 天影片";
+    underperformerList.append(empty);
+  } else {
+    underperformers.forEach((video) => {
+      const link = document.createElement("a");
+      link.className = "review-video";
+      link.href = video.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      const title = document.createElement("strong");
+      title.textContent = video.title;
+      const stats = document.createElement("span");
+      stats.textContent = `${formatNumber(video.views)} 次｜差 ${formatNumber(video.goal_gap)} 次`;
+      link.append(title, stats);
+      underperformerList.append(link);
+    });
+  }
+
+  const strategyList = document.querySelector("#strategyList");
+  const strategy = review.next_video_strategy || {};
+  const directives = [
+    ...(strategy.packaging_directives || []),
+    ...(strategy.script_directives || []),
+    ...(strategy.image_directives || []),
+  ];
+  strategyList.replaceChildren();
+  directives.slice(0, 6).forEach((directive) => {
+    const item = document.createElement("li");
+    item.textContent = directive;
+    strategyList.append(item);
+  });
+}
+
 function renderVideos(videos) {
   const grid = document.querySelector("#videoGrid");
   const template = document.querySelector("#videoCardTemplate");
@@ -94,6 +145,7 @@ fetch("data.json", { cache: "no-store" })
   })
   .then((data) => {
     renderMetrics(data);
+    renderReview(data);
     renderSeries(data.videos || []);
     renderVideos(data.videos || []);
   })

@@ -5,10 +5,13 @@ from pathlib import Path
 
 from tools.update_report import (
     INITIAL_DATA_MARKER,
+    build_weekly_review,
     classify_series,
+    evaluate_video,
     existing_views,
     extract_initial_data,
     extract_videos,
+    parse_age_days,
     parse_compact_count,
     short_title,
 )
@@ -23,6 +26,41 @@ class UpdateReportTests(unittest.TestCase):
         self.assertEqual(classify_series("貝爾女巫事件"), "靈異檔案")
         self.assertEqual(classify_series("佐迪亞克殺手"), "真實犯罪")
         self.assertEqual(short_title("[真實犯罪] 比利時孟德里案：未解之謎"), "比利時孟德里案")
+
+    def test_relative_publish_age(self) -> None:
+        self.assertEqual(parse_age_days("6 小時前"), 0)
+        self.assertEqual(parse_age_days("7 天前"), 7)
+        self.assertEqual(parse_age_days("2 weeks ago"), 14)
+        self.assertIsNone(parse_age_days("premiered recently"))
+
+    def test_video_is_not_failed_before_seven_days(self) -> None:
+        video = evaluate_video({"views": 10, "published_text": "6 天前"})
+        self.assertEqual(video["performance_status"], "early_watch")
+
+    def test_video_under_target_after_seven_days(self) -> None:
+        video = evaluate_video({"views": 250, "published_text": "7 天前"})
+        self.assertEqual(video["performance_status"], "under_target")
+        self.assertEqual(video["goal_gap"], 750)
+
+    def test_weekly_review_emits_bounded_improvement_plan(self) -> None:
+        review = build_weekly_review(
+            [
+                {
+                    "video_id": "abc",
+                    "title": "測試影片",
+                    "url": "https://www.youtube.com/watch?v=abc",
+                    "views": 100,
+                    "published_text": "8 天前",
+                }
+            ],
+            "2026-08-22",
+        )
+        self.assertEqual(review["under_target_count"], 1)
+        self.assertEqual(review["underperformers"][0]["goal_gap"], 900)
+        self.assertGreaterEqual(
+            len(review["next_video_strategy"]["script_directives"]),
+            3,
+        )
 
     def test_extracts_public_video_and_delta(self) -> None:
         data = {
