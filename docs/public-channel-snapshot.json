@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-10-20T14:26:06+08:00",
+  "report_date": "2026-10-20",
+  "source": "YouTube Data API v3",
+  "source_url": "https://www.youtube.com/channel/UCDR0CaFZ_O3UKM6AamLISlQ/videos",
+  "channel_id": "UCDR0CaFZ_O3UKM6AamLISlQ",
+  "coverage": "recent_public_uploads",
+  "measurement_window": {
+    "type": "lifetime_public_counters",
+    "as_of": "2026-10-20T14:26:06+08:00"
+  },
+  "public_video_count": 13,
+  "sampled_video_count": 13,
+  "channel_public_video_count": 13,
+  "public_view_total": 190,
+  "public_subscriber_count": 2,
+  "videos": [
+    {
+      "video_id": "v4c5unxKIC8",
+      "title": "阿米蒂維爾鬼屋事件：出版即爭議的靈異聲稱｜靈異檔案",
+      "views": 22,
+      "published_at": "2026-10-08T09:09:03Z",
+      "duration": "3:05",
+      "duration_seconds": 185,
+      "thumbnail_url": "https://i.ytimg.com/vi/v4c5unxKIC8/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=v4c5unxKIC8"
+    },
+    {
+      "video_id": "wbFyjayff3g",
+      "title": "瑪麗・賽勒斯特號之謎：關鍵紀錄為何突然中斷？｜歷史謎案",
+      "views": 1,
+      "published_at": "2026-09-28T08:39:37Z",
+      "duration": "3:13",
+      "duration_seconds": 193,
+      "thumbnail_url": "https://i.ytimg.com/vi/wbFyjayff3g/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=wbFyjayff3g"
+    },
+    {
+      "video_id": "RdzIY2vPVSk",
+      "title": "《阿米蒂維爾鬼屋事件》：出版即引發真偽爭議的超自然聲稱｜靈異檔案",
+      "views": 32,
+      "published_at": "2026-09-17T07:41:15Z",
+      "duration": "2:28",
+      "duration_seconds": 148,
+      "thumbnail_url": "https://i.ytimg.com/vi/RdzIY2vPVSk/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=RdzIY2vPVSk"
+    },
+    {
+      "video_id": "s__YSacM34g",
+      "title": "《阿米蒂維爾鬼屋事件》：出版即引發訴訟的靈異聲稱｜靈異檔案",
+      "views": 7,
+      "published_at": "2026-09-10T07:27:30Z",
+      "duration": "2:48",
+      "duration_seconds": 168,
+      "thumbnail_url": "https://i.ytimg.com/vi/s__YSacM34g/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=s__YSacM34g"
+    },
+    {
+      "video_id": "ee2bTxIC7b4",
+      "title": "瑪麗・賽勒斯特號之謎：關鍵紀錄為何突然中斷？｜歷史謎案",
+      "views": 19,
+      "published_at": "2026-09-07T07:28:13Z",
+      "duration": "3:16",
+      "duration_seconds": 196,
+      "thumbnail_url": "https://i.ytimg.com/vi/ee2bTxIC7b4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ee2bTxIC7b4"
+    },
+    {
+      "video_id": "1b2EW5eR1Tw",
+      "title": "黑色大麗花謀殺案：屍體被切半的神祕線索｜真實犯罪",
+      "views": 6,
+      "published_at": "2026-09-03T07:12:44Z",
+      "duration": "2:43",
+      "duration_seconds": 163,
+      "thumbnail_url": "https://i.ytimg.com/vi/1b2EW5eR1Tw/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=1b2EW5eR1Tw"
+    },
+    {
+      "video_id": "Zh8xDP7hQG8",
+      "title": "羅阿諾克殖民地失蹤之謎：關鍵紀錄為何突然中斷？｜歷史謎案",
+      "views": 37,
+      "published_at": "2026-08-31T13:55:17Z",
+      "duration": "3:15",
+      "duration_seconds": 195,
+      "thumbnail_url": "https://i.ytimg.com/vi/Zh8xDP7hQG8/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Zh8xDP7hQG8"
+    },
+    {
+      "video_id": "lCk3e-Viz3U",
+      "title": "倫敦恩菲爾德的超自然現象？恩菲爾德騷靈事件｜靈異檔案",
+      "views": 17,
+      "published_at": "2026-08-13T04:28:13Z",
+      "duration": "2:35",
+      "duration_seconds": 155,
+      "thumbnail_url": "https://i.ytimg.com/vi/lCk3e-Viz3U/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=lCk3e-Viz3U"
+    },
+    {
+      "video_id": "fzi2IXR-t3E",
+      "title": "倫敦塔王子失蹤之謎：歷史記錄留下了哪些未解疑點？｜歷史謎案",
+      "views": 6,
+      "published_at": "2026-08-12T02:53:28Z",
+      "duration": "3:46",
+      "duration_seconds": 226,
+      "thumbnail_url": "https://i.ytimg.com/vi/fzi2IXR-t3E/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fzi2IXR-t3E"
+    },
+    {
+      "video_id": "Yxi24hJw2Sc",
+      "title": "羅阿諾克殖民地失蹤之謎：歷史記錄留下了哪些未解疑點？｜歷史謎案",
+      "views": 6,
+      "published_at": "2026-08-03T05:59:49Z",
+      "duration": "2:59",
+      "duration_seconds": 179,
+      "thumbnail_url": "https://i.ytimg.com/vi/Yxi24hJw2Sc/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Yxi24hJw2Sc"
+    },
+    {
+      "video_id": "4j5KyyypUrI",
+      "title": "[真實犯罪] 比利時孟德里案：一個仍然未解的謎團",
+      "views": 6,
+      "published_at": "2026-07-30T07:09:00Z",
+      "duration": "2:33",
+      "duration_seconds": 153,
+      "thumbnail_url": "https://i.ytimg.com/vi/4j5KyyypUrI/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4j5KyyypUrI"
+    },
+    {
+      "video_id": "A4MHJa35uO4",
+      "title": "貝爾女巫事件",
+      "views": 4,
+      "published_at": "2026-07-30T06:54:23Z",
+      "duration": "2:47",
+      "duration_seconds": 167,
+      "thumbnail_url": "https://i.ytimg.com/vi/A4MHJa35uO4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=A4MHJa35uO4"
+    },
+    {
+      "video_id": "ZsQpsCQpUEk",
+      "title": "[真實犯罪] 佐迪亞克殺手密碼破解：解開美國史上最著名的連環謀殺案",
+      "views": 27,
+      "published_at": "2026-07-20T04:33:57Z",
+      "duration": "1:52",
+      "duration_seconds": 112,
+      "thumbnail_url": "https://i.ytimg.com/vi/ZsQpsCQpUEk/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZsQpsCQpUEk"
+    }
+  ],
+  "data_quality": {
+    "status": "valid",
+    "unknown_view_count": 0,
+    "unknown_published_at_count": 0,
+    "subscriber_count_status": "available",
+    "sample_status": "available",
+    "message": "官方 API 的近期公開影片樣本；不含私人或不公開影片。"
+  },
+  "owner_analytics": {
+    "status": "reauthorization_required",
+    "message": "既有憑證未授予 yt-analytics.readonly；需要頻道擁有者於 Google 同意畫面新增唯讀授權。"
+  }
+}

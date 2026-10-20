@@ -17,7 +17,7 @@ OUTPUT_PATH = Path(__file__).resolve().parents[1] / "docs" / "data.json"
 AUTO_SNAPSHOT_PATH = OUTPUT_PATH.with_name("public-channel-snapshot.json")
 USER_AGENT = "yt-ailazybag-public-report/2.0 (+https://github.com/ryamhome/yt-ailazybag-report)"
 INITIAL_DATA_MARKER = "var ytInitialData = "
-MAX_PUBLIC_VIDEOS = 12
+MAX_PUBLIC_VIDEOS = 30
 TARGET_VIEWS = 1_000
 TARGET_WINDOW_DAYS = 7
 TAIPEI = ZoneInfo("Asia/Taipei")
