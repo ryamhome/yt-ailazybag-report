@@ -26,19 +26,29 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">PUBLIC CHANNEL MONITOR</p>
-          <h2 id="overview-title">公開成效總覽</h2>
+          <h2 id="overview-title">最新公開影片樣本</h2>
         </div>
         <p class="updated" id="updatedAt">載入中</p>
       </div>
 
+      <div class="data-notice" role="status" aria-live="polite">
+        <span class="status-badge" id="dataStatus">檢查資料中</span>
+        <div>
+          <p id="dataStatusMessage">正在確認觀看數與發布日期。</p>
+          <p id="dataCoverage"></p>
+          <p id="dataSource"></p>
+          <p id="lastAttempt"></p>
+        </div>
+      </div>
+
       <div class="metric-grid" id="metricGrid" aria-live="polite">
         <article class="metric">
-          <span>公開影片</span>
+          <span>本次樣本影片</span>
           <strong id="videoCount">-</strong>
           <small>支</small>
         </article>
         <article class="metric">
-          <span>公開觀看</span>
+          <span>樣本累計觀看</span>
           <strong id="viewTotal">-</strong>
           <small>次</small>
         </article>
@@ -48,10 +58,28 @@
           <small>位</small>
         </article>
         <article class="metric accent-metric">
-          <span>最高觀看</span>
+          <span>樣本最高觀看</span>
           <strong id="topViews">-</strong>
           <small id="topTopic">讀取中</small>
         </article>
+      </div>
+    </section>
+
+    <section class="owner-analytics" aria-labelledby="owner-analytics-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CHANNEL OWNER ANALYTICS</p>
+          <h2 id="owner-analytics-title">點閱與觀看成效</h2>
+        </div>
+        <p class="section-note" id="ownerAnalyticsStatus">尚未連接</p>
+      </div>
+      <p class="analytics-message" id="ownerAnalyticsMessage">公開觀看數不能代替曝光、點閱率與留存資料。</p>
+      <p class="section-note analytics-period" id="ownerAnalyticsPeriod"></p>
+      <div class="metric-grid analytics-grid">
+        <article class="metric"><span>曝光次數</span><strong id="ownerImpressions">—</strong></article>
+        <article class="metric"><span>曝光點閱率</span><strong id="ownerCtr">—</strong></article>
+        <article class="metric"><span>平均觀看時間</span><strong id="ownerAverageDuration">—</strong></article>
+        <article class="metric"><span>前 30 秒留存</span><strong id="ownerRetention">—</strong></article>
       </div>
     </section>
 
@@ -59,7 +87,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">SATURDAY PERFORMANCE REVIEW</p>
-          <h2 id="review-title">7 日／1,000 觀看檢討</h2>
+          <h2 id="review-title">上架滿七天的累計觀看觀察</h2>
         </div>
         <p class="section-note" id="reviewDate">等待資料</p>
       </div>
@@ -67,10 +95,10 @@
         <div class="review-score">
           <span>達標</span>
           <strong id="reviewMet">-</strong>
-          <small id="reviewMature">已滿 7 天影片</small>
+          <small id="reviewMature">等待可用觀看與發布日期</small>
         </div>
         <div class="review-copy">
-          <p id="reviewSummary">正在整理週六檢討</p>
+          <p id="reviewSummary">正在確認資料是否足夠進行觀察</p>
           <p class="review-limit" id="reviewLimit"></p>
         </div>
       </div>
@@ -92,7 +120,7 @@
           <p class="eyebrow">SERIES BREAKDOWN</p>
           <h2 id="series-title">系列表現</h2>
         </div>
-        <p class="section-note">依目前公開影片觀看數比較</p>
+        <p class="section-note">僅比較本次樣本的累計觀看</p>
       </div>
       <div class="series-chart" id="seriesChart"></div>
     </section>
@@ -113,7 +141,7 @@
         <p class="eyebrow">DATA NOTICE</p>
         <h2 id="method-title">資料說明</h2>
       </div>
-      <p>本頁僅整理 YouTube 公開頻道頁可見資訊，不使用登入、Cookie 或頻道擁有者 Analytics。曝光、點閱率、留存率、流量來源與收益不在本報告範圍內。</p>
+      <p>公開區只整理本次讀取的最新影片樣本，並非整個頻道的總影片或總觀看。未知數值以 — 顯示；資料異常或未更新時暫停成效判定。公開觀看是累計值，無法回推上架首七日表現，也不能代替營利頁的有效公開觀看時數。點閱與觀看成效需另行連接頻道擁有者資料，未取得的指標不會估算補值。</p>
     </section>
   </main>
 

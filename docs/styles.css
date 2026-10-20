@@ -139,6 +139,70 @@ section + section {
   background: var(--white);
 }
 
+.data-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--red);
+  background: var(--white);
+}
+
+.data-notice p {
+  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.data-notice p:last-child {
+  margin-bottom: 0;
+}
+
+#dataCoverage,
+#dataSource,
+#lastAttempt {
+  color: var(--muted);
+}
+
+.status-badge {
+  flex-shrink: 0;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-badge.valid {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.status-badge.invalid,
+.status-badge.stale {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.analytics-message {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.analytics-period {
+  margin-bottom: 12px;
+}
+
+.analytics-grid .metric {
+  min-height: 120px;
+}
+
+.analytics-grid .metric strong {
+  font-size: clamp(23px, 3vw, 34px);
+}
+
 .metric {
   min-height: 142px;
   padding: 22px;
