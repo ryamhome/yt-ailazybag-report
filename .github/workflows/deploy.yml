@@ -38,6 +38,7 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Refresh public channel data
+        id: refresh
         run: python tools/update_report.py
 
       - uses: actions/configure-pages@v5
@@ -49,3 +50,11 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Deploy the explicit stale/unknown state first, then make failed refreshes
+      # visible in Actions rather than calling a successful deployment fresh data.
+      - name: Verify fresh usable report data
+        if: steps.refresh.outputs.data_status != 'valid'
+        run: |
+          echo "::error::The status page was deployed, but public metrics are stale or incomplete."
+          exit 1
