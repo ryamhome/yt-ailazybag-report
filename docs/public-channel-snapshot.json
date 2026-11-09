@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-20T14:26:06+08:00",
-  "report_date": "2026-10-20",
+  "generated_at": "2026-11-09T17:20:40+08:00",
+  "report_date": "2026-11-09",
   "source": "YouTube Data API v3",
   "source_url": "https://www.youtube.com/channel/UCDR0CaFZ_O3UKM6AamLISlQ/videos",
   "channel_id": "UCDR0CaFZ_O3UKM6AamLISlQ",
   "coverage": "recent_public_uploads",
   "measurement_window": {
     "type": "lifetime_public_counters",
-    "as_of": "2026-10-20T14:26:06+08:00"
+    "as_of": "2026-11-09T17:20:40+08:00"
   },
   "public_video_count": 13,
   "sampled_video_count": 13,
   "channel_public_video_count": 13,
-  "public_view_total": 190,
+  "public_view_total": 206,
   "public_subscriber_count": 2,
   "videos": [
     {
       "video_id": "v4c5unxKIC8",
       "title": "阿米蒂維爾鬼屋事件：出版即爭議的靈異聲稱｜靈異檔案",
-      "views": 22,
+      "views": 26,
       "published_at": "2026-10-08T09:09:03Z",
       "duration": "3:05",
       "duration_seconds": 185,
@@ -38,7 +38,7 @@
     {
       "video_id": "RdzIY2vPVSk",
       "title": "《阿米蒂維爾鬼屋事件》：出版即引發真偽爭議的超自然聲稱｜靈異檔案",
-      "views": 32,
+      "views": 35,
       "published_at": "2026-09-17T07:41:15Z",
       "duration": "2:28",
       "duration_seconds": 148,
@@ -58,7 +58,7 @@
     {
       "video_id": "ee2bTxIC7b4",
       "title": "瑪麗・賽勒斯特號之謎：關鍵紀錄為何突然中斷？｜歷史謎案",
-      "views": 19,
+      "views": 23,
       "published_at": "2026-09-07T07:28:13Z",
       "duration": "3:16",
       "duration_seconds": 196,
@@ -88,7 +88,7 @@
     {
       "video_id": "lCk3e-Viz3U",
       "title": "倫敦恩菲爾德的超自然現象？恩菲爾德騷靈事件｜靈異檔案",
-      "views": 17,
+      "views": 21,
       "published_at": "2026-08-13T04:28:13Z",
       "duration": "2:35",
       "duration_seconds": 155,
@@ -128,7 +128,7 @@
     {
       "video_id": "A4MHJa35uO4",
       "title": "貝爾女巫事件",
-      "views": 4,
+      "views": 5,
       "published_at": "2026-07-30T06:54:23Z",
       "duration": "2:47",
       "duration_seconds": 167,
