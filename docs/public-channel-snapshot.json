@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T17:20:40+08:00",
+  "generated_at": "2026-11-09T19:39:35+08:00",
   "report_date": "2026-11-09",
   "source": "YouTube Data API v3",
   "source_url": "https://www.youtube.com/channel/UCDR0CaFZ_O3UKM6AamLISlQ/videos",
@@ -7,14 +7,24 @@
   "coverage": "recent_public_uploads",
   "measurement_window": {
     "type": "lifetime_public_counters",
-    "as_of": "2026-11-09T17:20:40+08:00"
+    "as_of": "2026-11-09T19:39:35+08:00"
   },
-  "public_video_count": 13,
-  "sampled_video_count": 13,
-  "channel_public_video_count": 13,
-  "public_view_total": 206,
+  "public_video_count": 14,
+  "sampled_video_count": 14,
+  "channel_public_video_count": 14,
+  "public_view_total": 207,
   "public_subscriber_count": 2,
   "videos": [
+    {
+      "video_id": "UEct43kkx80",
+      "title": "兩千多年前就能預測日食？安提基特拉機械的證據｜歷史謎案",
+      "views": 0,
+      "published_at": "2026-11-09T11:38:02Z",
+      "duration": "2:01",
+      "duration_seconds": 121,
+      "thumbnail_url": "https://i.ytimg.com/vi/UEct43kkx80/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=UEct43kkx80"
+    },
     {
       "video_id": "v4c5unxKIC8",
       "title": "阿米蒂維爾鬼屋事件：出版即爭議的靈異聲稱｜靈異檔案",
@@ -88,7 +98,7 @@
     {
       "video_id": "lCk3e-Viz3U",
       "title": "倫敦恩菲爾德的超自然現象？恩菲爾德騷靈事件｜靈異檔案",
-      "views": 21,
+      "views": 22,
       "published_at": "2026-08-13T04:28:13Z",
       "duration": "2:35",
       "duration_seconds": 155,
