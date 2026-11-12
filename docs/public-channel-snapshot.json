@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-11-09T19:39:35+08:00",
-  "report_date": "2026-11-09",
+  "generated_at": "2026-11-12T14:30:01+08:00",
+  "report_date": "2026-11-12",
   "source": "YouTube Data API v3",
   "source_url": "https://www.youtube.com/channel/UCDR0CaFZ_O3UKM6AamLISlQ/videos",
   "channel_id": "UCDR0CaFZ_O3UKM6AamLISlQ",
   "coverage": "recent_public_uploads",
   "measurement_window": {
     "type": "lifetime_public_counters",
-    "as_of": "2026-11-09T19:39:35+08:00"
+    "as_of": "2026-11-12T14:30:01+08:00"
   },
   "public_video_count": 14,
   "sampled_video_count": 14,
   "channel_public_video_count": 14,
-  "public_view_total": 207,
+  "public_view_total": 214,
   "public_subscriber_count": 2,
   "videos": [
     {
       "video_id": "UEct43kkx80",
       "title": "兩千多年前就能預測日食？安提基特拉機械的證據｜歷史謎案",
-      "views": 0,
+      "views": 6,
       "published_at": "2026-11-09T11:38:02Z",
       "duration": "2:01",
       "duration_seconds": 121,
@@ -48,7 +48,7 @@
     {
       "video_id": "RdzIY2vPVSk",
       "title": "《阿米蒂維爾鬼屋事件》：出版即引發真偽爭議的超自然聲稱｜靈異檔案",
-      "views": 35,
+      "views": 36,
       "published_at": "2026-09-17T07:41:15Z",
       "duration": "2:28",
       "duration_seconds": 148,
