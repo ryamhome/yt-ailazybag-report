@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4EFE4">
+  <meta name="description" content="線上觀看安提基特拉機械完整影片，切換原版與新版，對照相同旁白下的畫面呈現。">
+  <title>安提基特拉機械｜剪輯呈現對照</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4efe4;
+      --ink: #191f20;
+      --rust: #955832;
+      --teal: #186a68;
+      --muted: #5b605b;
+      --line: #d8d0c1;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-synthesis: none;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    main { width: min(1040px, calc(100% - 64px)); margin: 0 auto; padding: 52px 0 32px; }
+    .eyebrow { margin: 0 0 17px; color: var(--rust); font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+    h1 { margin: 0; font-size: clamp(29px, 4.8vw, 47px); line-height: 1.3; letter-spacing: .025em; font-weight: 750; }
+    h1 span { display: block; margin-top: 7px; font-size: 17px; font-weight: 500; letter-spacing: .1em; color: var(--muted); }
+    .intro { max-width: 740px; margin: 21px 0 28px; font-size: 15px; line-height: 1.9; color: var(--muted); }
+    .player-card { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fbf8f1; box-shadow: 0 12px 34px rgb(25 31 32 / 5%); }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; }
+    .versions { display: flex; flex-wrap: wrap; gap: 6px; }
+    button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .version { border: 1px solid var(--line); border-radius: 6px; padding: 9px 18px; background: transparent; color: var(--ink); font-size: 14px; font-weight: 650; min-height: 42px; }
+    .version[aria-pressed="true"] { border-color: var(--teal); background: var(--teal); color: #fff; }
+    .version:hover { border-color: var(--teal); }
+    button:focus-visible, summary:focus-visible, a:focus-visible, video:focus-visible { outline: 3px solid var(--rust); outline-offset: 4px; }
+    .status { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
+    .screen { background: #101515; }
+    video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #101515; }
+    .error { padding: 16px 18px; border-top: 1px solid var(--line); background: #fff6ed; font-size: 14px; line-height: 1.8; }
+    .error p { margin: 0 0 10px; }
+    .retry { border: 1px solid var(--rust); background: transparent; color: #77411f; padding: 7px 13px; border-radius: 5px; min-height: 40px; }
+    [hidden] { display: none !important; }
+    .chapters { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; padding: 13px 18px 15px; border-top: 1px solid var(--line); }
+    .chapters-label { margin-right: 2px; font-size: 12px; color: var(--muted); }
+    .chapter { display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--teal); padding: 7px 8px; min-height: 40px; font-size: 13px; font-weight: 600; }
+    .chapter:hover { border-color: var(--line); background: #f1ece1; }
+    .chapter time { font-variant-numeric: tabular-nums; font-size: 12px; color: var(--muted); font-weight: 400; }
+    .caption { margin: 14px 2px 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    details { margin-top: 29px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    summary { width: fit-content; padding: 17px 0; cursor: pointer; font-size: 13px; color: var(--muted); }
+    .credits { max-width: 850px; padding: 0 0 20px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+    .credits p { margin: 0 0 10px; }
+    .credits p:last-child { margin-bottom: 0; }
+    .photo-links { display: flex; flex-wrap: wrap; gap: 6px 17px; margin: 6px 0 12px; }
+    a { color: var(--teal); text-underline-offset: 3px; }
+    footer { margin-top: 22px; color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+    @media (max-width: 600px) {
+      main { width: calc(100% - 32px); padding-top: 29px; }
+      .eyebrow { margin-bottom: 13px; font-size: 11px; }
+      h1 span { font-size: 15px; }
+      .intro { margin: 18px 0 22px; font-size: 14px; }
+      .toolbar { padding: 12px; gap: 9px; }
+      .status { width: 100%; }
+      .version { padding: 9px 20px; }
+      .player-card { border-radius: 8px; }
+      .chapters { padding: 9px 10px; gap: 2px 5px; }
+      .chapters-label { width: 100%; padding: 5px 8px 0; }
+      .chapter { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">世界奇談 · 完整影片預覽</p>
+      <h1>安提基特拉機械<span>剪輯呈現對照</span></h1>
+      <p class="intro">兩個版本皆為約 2 分鐘的完整影片，使用相同的旁白與音樂。從新版開始觀看，也可隨時切換原版，對照畫面安排；切換時會保留播放位置。</p>
+    </header>
+
+    <section aria-label="影片呈現比較">
+      <div class="player-card">
+        <div class="toolbar">
+          <div class="versions" role="group" aria-label="選擇影片版本">
+            <button class="version" type="button" data-version="a" aria-pressed="false" aria-controls="film">A 原版</button>
+            <button class="version" type="button" data-version="b" aria-pressed="true" aria-controls="film">B 新版</button>
+          </div>
+          <p class="status" id="player-status" role="status" aria-live="polite">目前：B 新版</p>
+        </div>
+        <div class="screen">
+          <video id="film" src="evidence.mp4" poster="poster.jpg" controls controlslist="nodownload" playsinline preload="metadata" aria-label="安提基特拉機械，B 新版" aria-describedby="player-status">
+            您的瀏覽器不支援影片播放，請使用支援 MP4 的新版瀏覽器觀看。
+          </video>
+        </div>
+        <div class="error" id="player-error" role="alert" hidden>
+          <p>影片目前無法播放。請確認網路連線後再試，或使用支援 MP4 的新版瀏覽器觀看。</p>
+          <button class="retry" id="retry" type="button">重新載入影片</button>
+        </div>
+        <nav class="chapters" aria-label="跳至影片段落">
+          <span class="chapters-label">跳至段落</span>
+          <button class="chapter" type="button" data-time="25.776" aria-controls="film">碎片數量 <time>0:25</time></button>
+          <button class="chapter" type="button" data-time="50.232" aria-controls="film">機械功能 <time>0:50</time></button>
+          <button class="chapter" type="button" data-time="75.720" aria-controls="film">年代爭議 <time>1:15</time></button>
+        </nav>
+      </div>
+      <p class="caption">此頁為呈現比較；觀看數、點閱率與留存表現仍需另行驗證。</p>
+    </section>
+
+    <details>
+      <summary>影像說明與來源</summary>
+      <div class="credits">
+        <p>影片中的碎片照為現代原物攝影。圖解用於說明概念，並非 1901 年打撈現場影像，也非可運作的實機重建。</p>
+        <p>原物照片：Logg Tandy，經裁切及剪輯使用，授權為 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。原始照片刊載於 Wikimedia Commons：</p>
+        <div class="photo-links">
+          <a href="https://commons.wikimedia.org/wiki/File:Antikythera_Fragment_A_(Front).webp" target="_blank" rel="noopener noreferrer">A 號碎片正面</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Antikythera_Fragment_E_(Front).webp" target="_blank" rel="noopener noreferrer">E 號碎片正面</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Antikythera_Fragment_G_(Front).webp" target="_blank" rel="noopener noreferrer">G 號碎片正面</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Antikythera_Fragment_B_(Front).webp" target="_blank" rel="noopener noreferrer">B 號碎片正面</a>
+        </div>
+        <p>音樂：〈<a href="https://www.scottbuckley.com.au/library/intervention/" target="_blank" rel="noopener noreferrer">Intervention</a>〉，Scott Buckley，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。</p>
+        <p>事實資料參考：Wikipedia〈<a href="https://en.wikipedia.org/wiki/Antikythera_mechanism" target="_blank" rel="noopener noreferrer">Antikythera mechanism</a>〉。</p>
+      </div>
+    </details>
+    <footer>世界奇談</footer>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+      const video = document.getElementById('film');
+      const status = document.getElementById('player-status');
+      const error = document.getElementById('player-error');
+      const buttons = [...document.querySelectorAll('[data-version]')];
+      const versions = {
+        a: { source: 'original.mp4', label: 'A 原版' },
+        b: { source: 'evidence.mp4', label: 'B 新版' }
+      };
+      let selected = 'b';
+      let pending = null;
+      let onMetadata = null;
+      let loadSequence = 0;
+
+      function announce(message) {
+        status.textContent = message;
+      }
+
+      function showError() {
+        error.hidden = false;
+        announce(`${versions[selected].label} 暫時無法播放`);
+      }
+
+      function seek(time) {
+        const limit = Number.isFinite(video.duration) ? video.duration : time;
+        video.currentTime = Math.max(0, Math.min(time, limit));
+      }
+
+      function loadVersion(key, force = false) {
+        if (!versions[key] || (key === selected && !force)) return;
+        const previous = pending || {
+          time: Number.isFinite(video.currentTime) ? video.currentTime : 0,
+          playing: !video.paused && !video.ended,
+          rate: video.playbackRate
+        };
+        pending = { ...previous };
+        const sequence = ++loadSequence;
+        if (onMetadata) video.removeEventListener('loadedmetadata', onMetadata);
+        video.pause();
+        selected = key;
+        error.hidden = true;
+        buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.version === key)));
+        video.setAttribute('aria-label', `安提基特拉機械，${versions[key].label}`);
+        announce(`正在切換至 ${versions[key].label}…`);
+
+        onMetadata = () => {
+          if (sequence !== loadSequence || !pending) return;
+          const restore = pending;
+          pending = null;
+          video.playbackRate = restore.rate;
+          seek(restore.time);
+          announce(`目前：${versions[key].label}`);
+          if (restore.playing) {
+            const playback = video.play();
+            if (playback) playback.catch(() => {
+              if (sequence === loadSequence && !video.error) {
+                announce(`目前：${versions[key].label}，請按播放繼續`);
+              }
+            });
+          }
+        };
+        video.addEventListener('loadedmetadata', onMetadata, { once: true });
+        video.src = versions[key].source;
+        video.load();
+      }
+
+      buttons.forEach(button => button.addEventListener('click', () => loadVersion(button.dataset.version)));
+      document.querySelectorAll('[data-time]').forEach(button => {
+        button.addEventListener('click', () => {
+          const time = Number(button.dataset.time);
+          if (pending) pending.time = time;
+          else if (video.readyState >= 1) seek(time);
+          else {
+            pending = { time, playing: false, rate: video.playbackRate };
+            loadVersion(selected, true);
+          }
+        });
+      });
+      document.getElementById('retry').addEventListener('click', () => loadVersion(selected, true));
+      video.addEventListener('error', showError);
+      if (!video.canPlayType || !video.canPlayType('video/mp4')) showError();
+    })();
+  </script>
+</body>
+</html>
